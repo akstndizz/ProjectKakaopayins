@@ -188,7 +188,7 @@ public class CouponServiceImpl implements CouponService {
 			throw new IllegalStateException("발급되지 않은 쿠폰");
 		}
 		
-		if(coupon.getExpirationTime().getTime() > new Date().getTime() ) {
+		if(coupon.getExpirationTime().getTime() < new Date().getTime() ) {
 			throw new IllegalStateException("기간이 만료된 쿠폰");
 		}
 
@@ -213,7 +213,7 @@ public class CouponServiceImpl implements CouponService {
 			throw new IllegalStateException("발급되지 않은 쿠폰");
 		}
 		
-		if(coupon.getExpirationTime().getTime() > new Date().getTime() ) {
+		if(coupon.getExpirationTime().getTime() < new Date().getTime() ) {
 			throw new IllegalStateException("기간이 만료된 쿠폰");
 		}
 
