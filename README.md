@@ -305,6 +305,6 @@ Response (Success) :
 
 ## 테스트
 - "src/test/java/com/kakaopay/repository/CouponRepositoryTest.java"
-- - "src/test/java/com/kakaopay/service/CouponServiceTest.java"
+- "src/test/java/com/kakaopay/service/CouponServiceTest.java"
 
 
