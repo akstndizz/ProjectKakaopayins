@@ -88,7 +88,7 @@ Restful API 호출시 SecurityConfing 설정에 맞게 접속 권한 부여
 
 ### 회원가입 및 로그인
 #### 1. signup 계정생성(ID, PW를 받아 저장, 패스워드는 안전한 방법으로 저장) (LoginController > function signup)
-* PW는 BCryptPasswordEncoder를 통해 안전하게 저장
+* userPw는 BCryptPasswordEncoder를 통해 안전하게 저장
 Request :
 ```
 POST /login/singup
