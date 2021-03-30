@@ -181,19 +181,19 @@ public class CouponServiceImpl implements CouponService {
 		Coupon coupon = couponRepository.findByCouponCode(couponCode);
 
 		if(coupon == null) {
-			throw new IllegalStateException("생성되지 않은 쿠폰");
+			throw new IllegalStateException(ErrorCodeEnum.E_USE_COUPON_NOT_CREATE.getMessage());
 		}
 		
 		if(coupon.getOwnUserId() == null) {
-			throw new IllegalStateException("발급되지 않은 쿠폰");
+			throw new IllegalStateException(ErrorCodeEnum.E_USE_COUPON_NOT_ISSUED.getMessage());
 		}
 		
 		if(coupon.getExpirationTime().getTime() < new Date().getTime() ) {
-			throw new IllegalStateException("기간이 만료된 쿠폰");
+			throw new IllegalStateException(ErrorCodeEnum.E_USE_COUPON_EXPIRATION.getMessage());
 		}
 
 		if(coupon.getUseTime() != null) {
-			throw new IllegalStateException("이미 사용된 쿠폰");
+			throw new IllegalStateException(ErrorCodeEnum.E_USE_COUPON_USED.getMessage());
 		}
 		
 		coupon.setUseTime(new Date());
@@ -206,19 +206,19 @@ public class CouponServiceImpl implements CouponService {
 		Coupon coupon = couponRepository.findByCouponCode(couponCode);
 		
 		if(coupon == null) {
-			throw new IllegalStateException("생성되지 않은 쿠폰");
+			throw new IllegalStateException(ErrorCodeEnum.E_USE_COUPON_NOT_CREATE.getMessage());
 		}
 		
 		if(coupon.getOwnUserId() == null) {
-			throw new IllegalStateException("발급되지 않은 쿠폰");
+			throw new IllegalStateException(ErrorCodeEnum.E_USE_COUPON_NOT_ISSUED.getMessage());
 		}
 		
 		if(coupon.getExpirationTime().getTime() < new Date().getTime() ) {
-			throw new IllegalStateException("기간이 만료된 쿠폰");
+			throw new IllegalStateException(ErrorCodeEnum.E_USE_COUPON_EXPIRATION.getMessage());
 		}
 
 		if(coupon.getUseTime() == null) {
-			throw new IllegalStateException("사용되지 않은 쿠폰");
+			throw new IllegalStateException(ErrorCodeEnum.E_USE_COUPON_NOT_USED.getMessage());
 		}
 		
 		coupon.setUseTime(null);

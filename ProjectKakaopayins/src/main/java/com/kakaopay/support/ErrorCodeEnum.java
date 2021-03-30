@@ -12,13 +12,12 @@ public enum ErrorCodeEnum {
 	E_CREATE_COUPON("EC001","쿠폰 생성 중 오류가 발생하였습니다."),
 	E_CREATE_COUPON_CSV_NOT_FILE("EC002","쿠폰 생성 중 오류가 발생하였습니다.(NOT CSV FILE )"),
 	E_CREATE_COUPON_CSV_IO("EC002","쿠폰 생성 중 오류가 발생하였습니다.(CSV IO Exception)"),
+	E_USE_COUPON_NOT_CREATE("E0001","생성되지 않은 쿠폰"),
+	E_USE_COUPON_NOT_ISSUED("E0002","발급되지 않은 쿠폰"),
+	E_USE_COUPON_EXPIRATION("E0003","기간이 만료된 쿠폰"),
+	E_USE_COUPON_USED("E0004","이미 사용된 쿠폰"),
+	E_USE_COUPON_NOT_USED("E0004","사용되지 않은 쿠폰");
 	
-	
-	E_PICKUP_NOT_ROOM("EP002","방에 속해있지 않습니다."),
-	E_PICKUP_MINE("EP003","자신이 만든 뿌리기는 주울 수 없습니다."),
-	E_PICKUP_TIMEOVER("EP004","줍기 허용시간이 만료되었습니다."),
-	E_PICKUP_DUPLICATE("EP005","이미 주웠던 사용자 입니다."),
-	E_SELECT_NULL("ES001","조회할 내용이 없습니다.");
 	
 	private String code;
 	
